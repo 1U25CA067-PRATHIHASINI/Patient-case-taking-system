@@ -85,12 +85,12 @@ type Consent = {
 
 type Dashboard = {
   latest: {
-    heartRate: number;
-    oxygen: number;
-    temperature: number;
-    hrv: number;
-    recordedAt?: string;
-  };
+  heartRate: number;
+  oxygen: number;
+  temperature: number;
+  hrv: number;
+  recordedAt: string;
+};
   trend: string;
   riskScore: number;
   riskLabel: string;
@@ -355,12 +355,13 @@ function getDashboard(): Dashboard {
 
   return {
     latest: {
-      heartRate: latest?.heartRate ?? 76,
-      oxygen: latest?.oxygen ?? 98,
-      temperature: latest?.temperature ?? 36.7,
-      hrv: latest?.hrv ?? 52,
-      recordedAt: latest?.recordedAt ?? new Date().toISOString(),
-    },
+     latest: {
+  heartRate: latest?.heartRate ?? 76,
+  oxygen: latest?.oxygen ?? 98,
+  temperature: latest?.temperature ?? 36.7,
+  hrv: latest?.hrv ?? 52,
+  recordedAt: latest?.recordedAt ?? new Date().toISOString(),
+},
     trend: 'Up slightly',
     riskScore: 86,
     riskLabel: 'Within usual range',
