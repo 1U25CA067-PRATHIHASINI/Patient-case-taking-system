@@ -4,6 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  base: '/Patient-case-taking-system/',
+
   plugins: [
     react(),
     tailwindcss(),
