@@ -354,7 +354,6 @@ function getDashboard(): Dashboard {
   ).length;
 
   return {
-    latest: {
      latest: {
   heartRate: latest?.heartRate ?? 76,
   oxygen: latest?.oxygen ?? 98,
