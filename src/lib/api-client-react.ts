@@ -73,10 +73,10 @@ type CareTeamMember = {
 
 type Consent = {
   id:
-    | 'wearableData'
-    | 'careTeamSharing'
-    | 'emergencyEscalation'
-    | 'modelAnalysis';
+  | 'wearableData'
+  | 'careTeamSharing'
+  | 'emergencyEscalation'
+  | 'modelAnalysis';
   label: string;
   description: string;
   required: boolean;
@@ -89,6 +89,7 @@ type Dashboard = {
     oxygen: number;
     temperature: number;
     hrv: number;
+    recordedAt?: string;
   };
   trend: string;
   riskScore: number;
@@ -358,6 +359,7 @@ function getDashboard(): Dashboard {
       oxygen: latest?.oxygen ?? 98,
       temperature: latest?.temperature ?? 36.7,
       hrv: latest?.hrv ?? 52,
+      recordedAt: latest?.recordedAt ?? new Date().toISOString(),
     },
     trend: 'Up slightly',
     riskScore: 86,
