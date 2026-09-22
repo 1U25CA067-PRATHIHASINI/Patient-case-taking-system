@@ -1,8 +1,6 @@
 {
   "name": "pulseguard-health",
-  "version": "0.0.0",
-  "private": true,
-  "type": "module",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
@@ -72,13 +70,5 @@
     "tailwindcss": "^4.0.0",
     "typescript": "^5.7.2",
     "vite": "^6.0.7"
-  },
-  {
-  "scripts": {
-    "dev": "vite --host 0.0.0.0",
-    "build": "vite build",
-    "serve": "vite preview --host 0.0.0.0",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
   }
-}
 }
